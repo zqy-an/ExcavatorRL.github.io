@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AirExo">
+  <meta name="keywords" content="AirExo, Robotics, Robot Learning, Exoskeletons">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Low-Cost Exoskeletons for Learning Whole-Arm Manipulation in the Wild</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://airexo.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://graspnet.net/anygrasp.html">
+            AnyGrasp
+          </a>
+          <a class="navbar-item" href="https://rh20t.github.io/">
+            RH20T
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Low-Cost Exoskeletons for Learning Whole-Arm Manipulation in the Wild</h1>
+          <h4 class="title is-4 conference">ICRA 2024</h4>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://tonyfang.net/">Hongjie Fang</a><sup>*,1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://fang-haoshu.github.io/">Hao-Shu Fang</a><sup>*,1</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:sommerfeld@sjtu.edu.cn">Yiming Wang</a><sup>*,1</sup>,
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="mailto:jiejiren@sjtu.edu.cn">Jieji Ren</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="mailto:jjchen20@sjtu.edu.cn">Jingjing Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="mailto:ruozhang0608@gmail.com">Ruo Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="mailto:wangweiming@sjtu.edu.cn">Weiming Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.mvig.org/">Cewu Lu</a><sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <sup>1</sup><span class="author-block">Shanghai Jiao Tong University</span>, <sup>2</sup><span class="author-block">Shanghai Artificial Intelligence Laboratory</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">(* = Equal Contribution, <a href="mailto:galaxies@sjtu.edu.cn">galaxies@sjtu.edu.cn</a>, <a href="mailto:fhaoshu@gmail.com">fhaoshu@gmail.com</a>, <a href="mailto:sommerfeld@sjtu.edu.cn">sommerfeld@sjtu.edu.cn</a>)</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2309.14975.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="static/pdfs/poster.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-image"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#airexo"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-robot"></i>
+                  </span>
+                  <span>AirExo</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <iframe width="760" height="560" src="https://www.youtube.com/embed/hGnCfksRGHA?si=i7BCb2Lge99cf2Yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="abstract">Abstract</a></h2>
+        <div class="content has-text-justified">
+          <p>
+            While humans can use parts of their arms other than the hands for manipulations like gathering and supporting, whether robots can effectively learn and perform the same type of operations remains relatively unexplored. As these manipulations require joint-level control to regulate the complete poses of the robots, we develop <b><i>AirExo</i></b>, a low-cost, adaptable, and portable dual-arm exoskeleton, for teleoperation and demonstration collection. As collecting teleoperated data is expensive and time-consuming, we further leverage <b><i>AirExo</i></b> to collect cheap in-the-wild demonstrations at scale. Under our in-the-wild learning framework, we show that with only 3 minutes of the teleoperated demonstrations, augmented by diverse and extensive in-the-wild data collected by <b><i>AirExo</i></b>, robots can learn a policy that is comparable to or even better than one learned from teleoperated demonstrations lasting over 20 minutes. Experiments demonstrate that our approach enables the model to learn a more general and robust policy across the various stages of the task, enhancing the success rates in task completion even with the presence of disturbances.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="airexo">AirExo</a></h2>
+        <div class="column">
+          <span class="link-block">
+            <a href="https://github.com/AirExo/airexo-models"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                  <i class="fa fa-database"></i>
+              </span>
+              <span>Models</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="static/pdfs/airexo_guide.pdf"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                  <i class="fa fa-file-pdf"></i>
+              </span>
+              <span>Installation Guide</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://github.com/AirExo/collector"
+               class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                  <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+              </a>
+          </span>
+        </div>
+        
+        <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/airexo.png"></img>
+          </div>
+          <p>
+            We introduce <b><i>AirExo</i></b>, an open-source, portable, adaptable, inexpensive (<b>approximately $300 per arm</b>), and robust exoskeleton system. The system is initially developed for <a href="https://github.com/AirExo/airexo-models/tree/main/flexiv">Flexiv Rizon arms</a>, and it can be quickly modified for different robotic arms, such as <a href="https://github.com/AirExo/airexo-models/tree/main/ur5">UR5</a>, <a href="https://github.com/AirExo/airexo-models/tree/main/franka">Franka</a> and <a href="https://github.com/AirExo/airexo-models/tree/main/kuka">Kuka</a>.
+          </p>
+          <div class="column">
+          <video id="airexo" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/airexo1.mp4"
+                    type="video/mp4">
+          </video>
+          </div>
+          <p>
+            After calibration with a dual-arm robot, <b><i>AirExo</i></b> can achieve precise joint-level teleoperations of the robot for teleoperated demonstration collection. 
+          </p>     
+          <div class="column has-text-centered">
+            <video id="airexo" autoplay muted loop playsinline>
+              <source src="./static/videos/airexo2.mp4"
+                      type="video/mp4">
+            </video>
+            </div>
+          <p>
+            Moreover, contributed to its portable property, <b><i>AirExo</i></b> enables <i>in-the-wild data collection for dexterous manipulation without needing a robot</i>. Humans can wear <b><i>AirExo</i></b>, conduct manipulation in the wild, and collect demonstrations at scale. The one-to-one joint mapping also reduces the barriers of transferring policies trained on human-collected data to robots. 
+          </p>          
+          <div class="column has-text-centered">
+            <video width="220" id="airexo" autoplay muted loop playsinline>
+              <source src="./static/videos/airexo3.mp4"
+                      type="video/mp4">
+            </video>
+            </div>
+          <p>
+            This breakthrough capability not only simplifies data collection but also extends the reach of whole-arm manipulation into unstructured environments, where robots can learn and adapt from human interactions. In the future, we are excited to see our <b><i>AirExo</i></b> collecting large-scale demonstrations in unstructured environments and facilitating robot learning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="learning-itw">Learning in the Wild</a></h2>
+        <div class="column">
+              <!-- Data Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1f_bmrFPep90aUSBj28TdXRiNvHo7PpxR?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Sample Demonstration Data</span>
+                </a>
+              </span>              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/AirExo/act-in-the-wild"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+        </div>
+        <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/learning-itw.png"></img>
+          </div>
+          <p>
+            <b><i>AirExo</i></b> serves as a natural bridge for the kinematic gap between humans and robots. To address the domain gap between images, our approach involves a two-stage training process. In the first stage, we pre-train the policy using in-the-wild human demonstrations and actions recorded by the exoskeleton encoders. During this phase, the policy primarily learns the high-level task execution strategy from the large-scale and diverse in-the-wild human demonstrations. Subsequently, in the second stage, the policy undergoes fine-tuning using teleoperated demonstrations with robot actions to refine the motions based on the previously acquired high-level task execution strategy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="experiments">Experimental Results</a></h2>
+        <div class="content has-text-justified">
+          <div class="column">
+            <video id="result1" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/result1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <p>
+            We evaluate the performance of different methods on  the "Gather Balls" task. After applying our in-the-wild learning framework, with the assistance of in-the-wild demonstrations, ACT can achieve the same level of performance as 50 teleoperated demonstrations with just 10 teleoperated demonstrations. This demonstrates that our learning framework with in-the-wild demonstrations makes the policy more sample-efficient for teleoperated demonstrations.
+          </p>
+          <p>
+            <details>
+              <summary style="color:slateblue">&nbsp;<b>Links to  full videos in this experiment.</b></summary>
+              <br>
+            <table style="text-align:center">
+              <tr><td><b># Teleoperated Demonstrations</b></td> <td><b># In-the-Wild Demonstrations</b></td><td><b>Method</b></td> <td><b>Video</b></td></tr>
+              <tr></tr>
+              <tr>
+                <td>50</td><td>-</td><td>VIP + NN</td> <td><a href="https://youtu.be/HTcxeEhi5p4">Link</a></td>
+              </tr>
+              <tr>
+                <td>50</td><td>-</td><td>VC-1 + NN</td> <td><a href="https://youtu.be/jDO4wiU-3ow">Link</a></td>
+              </tr>
+              <tr>
+                <td>50</td><td>-</td><td>MVP + NN</td> <td><a href="https://youtu.be/w3gp-_cFVrQ">Link</a></td>
+              </tr>
+              <tr>
+                <td>50</td><td>-</td><td>VINN</td> <td><a href="https://youtu.be/CVMD41ZGvMI">Link</a></td>
+              </tr>
+              <tr>
+                <td>50</td><td>-</td><td>ConvMLP</td> <td><a href="https://youtu.be/oVjgKlvzG34">Link</a></td>
+              </tr>
+              <tr>
+                <td>50</td><td>-</td><td>BeT</td> <td><a href="https://youtu.be/H6SsaK_f16k">Link</a></td>
+              </tr>
+              <tr>
+                <td>50</td><td>-</td><td>ACT</td> <td><a href="https://youtu.be/_AwjfN4wgxo">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>-</td><td>VINN</td> <td><a href="https://youtu.be/GS9mbfLY-lA">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>-</td><td>ACT</td> <td><a href="https://youtu.be/H6SsaK_f16k">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>50</td><td>ACT</td> <td><a href="https://youtu.be/_I-RvZPCYSg">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>100</td><td>ACT</td> <td><a href="https://youtu.be/nYQoMoWeTdk">Link</a></td>
+              </tr>
+              </table>
+            </details>
+          </p>
+          <div class="column">
+            <video id="result2" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/result2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <p>
+            We also evaluate the performance of different methods on the "Grasp from the Curtained Shelf" task. After training with our in-the-wild learning framework, ACT exhibits a significant improvement in success rates in the "grasp" and "throw" stages. It achieves even higher success rates, surpassing those obtained with the original set of 50 teleoperated demonstrations lasting more than 20 minutes, using only 10 such demonstrations lasting approximately 3 minutes.  This highlights that our proposed in-the-wild framework indeed enables the policy to learn a better strategy, effectively enhancing the success rates in the later stages of multi-stage tasks.
+          </p>
+          <p>
+            <details>
+              <summary style="color:slateblue">&nbsp;<b>Links to  full videos in this experiment.</b></summary>
+              <br>
+            <table style="text-align:center">
+              <tr><td><b># Teleoperated Demonstrations</b></td> <td><b># In-the-Wild Demonstrations</b></td><td><b>Method</b></td> <td><b>Video</b></td></tr>
+              <tr></tr>
+              <tr>
+                <td>50</td><td>-</td><td>VINN</td> <td><a href="https://youtu.be/ddWwnBy4Iw4">Link</a></td>
+              </tr>
+              <tr>
+                <td>50</td><td>-</td><td>ACT</td> <td><a href="https://youtu.be/R-X5ZXFpg7Q">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>-</td><td>VINN</td> <td><a href="https://youtu.be/8_lM1SaUma0">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>-</td><td>ACT</td> <td><a href="https://youtu.be/x8nTK02A0Cw">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>50</td><td>ACT</td> <td><a href="https://youtu.be/beUuG9tUM50">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>100</td><td>ACT</td> <td><a href="https://youtu.be/NW9T2SeH0Uk">Link</a></td>
+              </tr>
+              </table>
+            </details>
+            </p>
+            <div class="column">
+              <video id="result3" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/result3.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <p>
+              We then evaluate the policy performance when adding some disturbances in the experimental environment. The results demonstrate that our in-the-wild learning framework can leverage diverse in-the-wild demonstrations to make the learned policy more robust and generalizable to various environmental disturbances.
+            </p>
+
+          <p>
+            <details>
+              <summary style="color:slateblue">&nbsp;<b>Links to  full videos in this experiment.</b></summary>
+              <br>
+            <table style="text-align:center">
+              <tr><td><b># Teleoperated Demonstrations</b></td> <td><b># In-the-Wild Demonstrations</b></td><td><b>Method</b></td> <td><b>Video</b></td></tr>
+              <tr></tr>  
+              <tr>
+                <td>10</td><td>-</td><td>ACT</td> <td><a href="https://youtu.be/e9SkaHP4U90">Link</a></td>
+              </tr>
+              <tr>
+                <td>10</td><td>100</td><td>ACT</td> <td><a href="https://youtu.be/cEhb6YDLkgU">Link</a></td>
+              </tr>
+              </table>
+            </details>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+    <h2 class="title">BibTeX</h2>
+    </div>
+    <pre><code>@article{
+    fang2023low,
+    title = {Low-Cost Exoskeletons for Learning Whole-Arm Manipulation in the Wild},
+    author = {Fang, Hongjie and Fang, Hao-Shu and Wang, Yiming and Ren, Jieji and Chen, Jingjing and Zhang, Ruo and Wang, Weiming and Lu, Cewu},
+    journal = {arXiv preprint arXiv:2309.14975},
+    year = {2023}
+}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. Modified upon original <a href="https://nerfies.github.io/"> Nerfies </a> website (<a href="https://github.com/nerfies/nerfies.github.io">source</a>). The exoskeleton icon is modified upon the initial icon by <a href="https://www.flaticon.com/free-icons/exoskeleton" title="exoskeleton icons">surang @ Flaticon</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
