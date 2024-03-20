@@ -42,7 +42,7 @@
 </head>
 <body>
 
-
+<!--
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -75,7 +75,7 @@
     </div>
   </div>
 </nav>
-
+-->
 
 
 <section class="hero">
@@ -134,6 +134,7 @@
                   <span>Paper</span>
                 </a>
               </span>
+              <!--
               <span class="link-block">
                 <a href="static/pdfs/poster.pdf"
                    class="external-link button is-normal is-rounded is-dark">
@@ -143,6 +144,7 @@
                   <span>Poster</span>
                 </a>
               </span>
+              -->
               <!-- Video Link. -->
               <span class="link-block">
                 <a href="#airexo"
@@ -150,7 +152,7 @@
                   <span class="icon">
                       <i class="fa fa-robot"></i>
                   </span>
-                  <span>AirExo</span>
+                  <span>Sample Demonstration Data</span>
                 </a>
               </span>
             </div>
@@ -176,7 +178,7 @@
         <h2 class="title is-3"><a id="abstract">Abstract</a></h2>
         <div class="content has-text-justified">
           <p>
-            While humans can use parts of their arms other than the hands for manipulations like gathering and supporting, whether robots can effectively learn and perform the same type of operations remains relatively unexplored. As these manipulations require joint-level control to regulate the complete poses of the robots, we develop <b><i>AirExo</i></b>, a low-cost, adaptable, and portable dual-arm exoskeleton, for teleoperation and demonstration collection. As collecting teleoperated data is expensive and time-consuming, we further leverage <b><i>AirExo</i></b> to collect cheap in-the-wild demonstrations at scale. Under our in-the-wild learning framework, we show that with only 3 minutes of the teleoperated demonstrations, augmented by diverse and extensive in-the-wild data collected by <b><i>AirExo</i></b>, robots can learn a policy that is comparable to or even better than one learned from teleoperated demonstrations lasting over 20 minutes. Experiments demonstrate that our approach enables the model to learn a more general and robust policy across the various stages of the task, enhancing the success rates in task completion even with the presence of disturbances.
+            <b><i>ExcavatorRL</i></b> constitutes a novel reinforcement learning framework aimed at tackling the challenges of automating excavator operations.  This research presents a comprehensive system that utilizes empirical data from SANY and a Unity-based simulation for the training and evaluation of reinforcement learning models for unmanned excavation.  Through the generation of an augmented dataset of 155 trajectories with DoppelGANger, and the incorporation of terrain information into the state space through grid feature vectors extracted by the CLIP network, <b><i>ExcavatorRL</i></b> establishes a detailed state, action, and reward space, facilitating effective learning in complex environments.  The Decision Transformer algorithm was employed, with our proposed system attaining the highest average full bucket rate of 0.83 and a cosine similarity of 0.94 for terrain shape evaluation, outperforming other models and standard manual trajectories.  These results underscore the potential of combining augmented datasets with detailed terrain features to enhance the efficiency and reliability of excavation automation.  Future work will be directed towards improving the simulation environment, integrating advanced RL algorithms, and conducting real-world deployment tests with the aim of further advancing autonomous construction machinery operations. 
           </p>
         </div>
       </div>
@@ -190,7 +192,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3"><a id="airexo">AirExo</a></h2>
+        <h2 class="title is-3"><a id="ExcavatorRL">AirExo</a></h2>
         <div class="column">
           <span class="link-block">
             <a href="https://github.com/AirExo/airexo-models"
