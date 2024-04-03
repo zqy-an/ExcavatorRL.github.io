@@ -83,7 +83,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ExcavatorRL: A Novel Benchmark and Environment for Reinforcement Learning in Excavation</h1>
+          <h1 class="title is-1 publication-title">ExcavatorRL: A Novel Framework and Environment for Reinforcement Learning in Excavation</h1>
           <!-- 
           <h4 class="title is-4 conference">ICRA 2024</h4>
           -->
@@ -176,6 +176,51 @@
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">ExcavatorRL</span> aims to improve excavation automation by applying a reinforcement learning framework that utilizes real-world data and simulations for informed decision-making.
       </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video2_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video2_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video2_3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video2_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video2_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video2_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -292,9 +337,45 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <h2 class="title is-3"><a id="learning-itw">Experimental Results</a></h2>
+        <div class="content has-text-justified">
+          <div class="column">
+          <img src="static/images/figure10.jpg"></img>
+          </div>
+          <p>
+            Our study set up three different systems for comparison. 
+            System 1 combined an augmented dataset with terrain features extracted using CLIP. 
+            System 2 used the original dataset with CLIP-extracted features, while System 3 also had an augmented dataset but did not include terrain features. 
+            We assessed how these setups affect the model's mining task performance.
+
+            The results from tests in a simulated excavation environment showed varied digging efficiency across the three systems, measured by the Full Bucket Rate (FBR). 
+            System 1 demonstrated high efficiency and consistency, surpassing the standard system. 
+            System 2 showed variability in its performance, and System 3 lagged significantly, mainly registering low FBR values. 
+            The final terrain shapes produced by each system were analyzed for their similarity to a standard manual excavation trajectory, with System 1 achieving the highest cosine similarity.
+          </p>
+          <div class="column">
+            <img src="static/images/figure12.jpg"></img>
+            </div>
+          <p>
+            Our findings suggest that integrating augmented datasets and terrain features can significantly enhance the performance of offline reinforcement learning algorithms in simulated excavation tasks. 
+            System 1's superior performance underscores the importance of enriched training data and detailed terrain information for improving excavation efficiency and reliability. 
+            The study highlights the potential of advanced data and feature techniques in refining algorithms for complex tasks like excavation, pointing to promising directions for future research in autonomous excavation technology.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h2 class="title is-3"><a id="learning-itw">Learning in the Wild</a></h2>
         <div class="column">
-              <!-- Data Link. -->
+
               <span class="link-block">
                 <a href="https://drive.google.com/drive/folders/1f_bmrFPep90aUSBj28TdXRiNvHo7PpxR?usp=drive_link"
                    class="external-link button is-normal is-rounded is-dark">
@@ -304,7 +385,7 @@
                   <span>Sample Demonstration Data</span>
                 </a>
               </span>              
-              <!-- Code Link. -->
+
               <span class="link-block">
                 <a href="https://github.com/AirExo/act-in-the-wild"
                    class="external-link button is-normal is-rounded is-dark">
@@ -454,6 +535,8 @@
     </div>
   </div>
 </section>
+-->
+
 <!--
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
