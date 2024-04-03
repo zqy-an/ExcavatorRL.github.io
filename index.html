@@ -89,33 +89,33 @@
           -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://tonyfang.net/">Qianyou Zhao</a><sup>1</sup>,</span>
+              <a href="1025034345@sjtu.edu.cn">Qianyou Zhao</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://fang-haoshu.github.io/">Duidi Wu</a><sup>1</sup>,</span>
+              <a href="gaol49@sany.com.cn">Le Gao</a><sup>3</sup>,</span>
             <span class="author-block">
-              <a href="mailto:sommerfeld@sjtu.edu.cn">Qikai Xu</a><sup>2</sup>,
+              <a href="wu_duidi@sjtu.edu.cn">Duidi Wu</a><sup>1</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="mailto:jiejiren@sjtu.edu.cn">Yihao Lei</a><sup>1</sup>,
+              <a href="martin123454412@gmail.com">Yihao Lei</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="mailto:jjchen20@sjtu.edu.cn">Qingquan Liu</a><sup>2</sup>,
+              <a href="mailto:jjchen20@sjtu.edu.cn">Xinyao Meng</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="mailto:ruozhang0608@gmail.com">Lingyu Wang</a><sup>1</sup>,
+              <a href="wanglingyu_025@sjtu.edu.cn">Lingyu Wang</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="mailto:wangweiming@sjtu.edu.cn">Jin Qi</a><sup>1</sup>,
+              <a href="jinhuaqj@sjtu.edu.cn">Jin Qi</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.mvig.org/">Jie Hu</a><sup>1</sup>
+              <a href="hujie@sjtu.edu.cn">Jie Hu</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <sup>1</sup><span class="author-block">Shanghai Jiao Tong University</span>, <sup>2</sup><span class="author-block">Sany</span>
+            <sup>1</sup><span class="author-block">School of Mechanical Engineering, Shanghai Jiao Tong University, Shanghai, 200240, , China</span>, <sup>2</sup><span class="author-block">School of Design, Shanghai Jiao Tong University, Shanghai, 200240, , China </span>, <sup>3</sup><span class="author-block">Sany heavy machinery Co.ltd, Kunshan, 215300, Jiangsu, China </span>
           </div>
           <!-- 
           <div class="is-size-5 publication-authors">
@@ -163,11 +163,20 @@
   </div>
 </section>
 
-<section class="section">
+
+<section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <iframe width="760" height="560" src="https://www.youtube.com/embed/hGnCfksRGHA?si=i7BCb2Lge99cf2Yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/video1.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
   </div>
 </section>
 
@@ -178,7 +187,7 @@
         <h2 class="title is-3"><a id="abstract">Abstract</a></h2>
         <div class="content has-text-justified">
           <p>
-            <b><i>ExcavatorRL</i></b> constitutes a novel reinforcement learning framework aimed at tackling the challenges of automating excavator operations.  This research presents a comprehensive system that utilizes empirical data from SANY and a Unity-based simulation for the training and evaluation of reinforcement learning models for unmanned excavation.  Through the generation of an augmented dataset of 155 trajectories with DoppelGANger, and the incorporation of terrain information into the state space through grid feature vectors extracted by the CLIP network, <b><i>ExcavatorRL</i></b> establishes a detailed state, action, and reward space, facilitating effective learning in complex environments.  The Decision Transformer algorithm was employed, with our proposed system attaining the highest average full bucket rate of 0.83 and a cosine similarity of 0.94 for terrain shape evaluation, outperforming other models and standard manual trajectories.  These results underscore the potential of combining augmented datasets with detailed terrain features to enhance the efficiency and reliability of excavation automation.  Future work will be directed towards improving the simulation environment, integrating advanced RL algorithms, and conducting real-world deployment tests with the aim of further advancing autonomous construction machinery operations. 
+            The construction machinery industry is growing rapidly due to automation and artificial intelligence. Excavator technology is at the forefront of this change. Excavator automation has huge potential, but must deal with the complexity of changing and unpredictable setups and the need for precise handling. Here, we present <b><i>ExcavatorRL</i></b>, an innovative reinforcement learning framework and system designed to overcome the challenges. Our research utilizes empirical data collected from real-world scenarios and a Unity-based simulation for the training and evaluation of reinforcement learning models. <b><i>ExcavatorRL</i></b> has enhanced its learning capabilities by generating an augmented dataset comprising 155 trajectories using DoppelGANger. It also integrates terrain data into the decision-making process by using grid feature vectors processed by CLIP. This method forms a comprehensive state, action, and reward framework essential for effective learning in intricate settings. Using the Decision Transformer algorithm, our proposed system achieves the highest average full bucket rate of 0.83 and a cosine similarity of 0.94 in terrain shape assessment. The results outperform other systems and standard manual trajectories. <b><i>ExcavatorRL</i></b> underscores the potential of combining augmented datasets with detailed terrain features to enhance the efficiency and reliability of excavation automation. Future work will be directed towards improving the simulation environment, integrating advanced RL algorithms, and conducting real-world deployment tests.
           </p>
         </div>
       </div>
@@ -192,43 +201,15 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3"><a id="ExcavatorRL">AirExo</a></h2>
-        <div class="column">
-          <span class="link-block">
-            <a href="https://github.com/AirExo/airexo-models"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="fa fa-database"></i>
-              </span>
-              <span>Models</span>
-            </a>
-          </span>
-          <span class="link-block">
-            <a href="static/pdfs/airexo_guide.pdf"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="fa fa-file-pdf"></i>
-              </span>
-              <span>Installation Guide</span>
-            </a>
-          </span>
-          <span class="link-block">
-            <a href="https://github.com/AirExo/collector"
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="fab fa-github"></i>
-              </span>
-              <span>Code</span>
-              </a>
-          </span>
+        <h2 class="title is-3"><a id="ExcavatorRL">ExcavatorRL</a></h2>
         </div>
         
         <div class="content has-text-justified">
           <div class="column">
-          <img src="static/images/airexo.png"></img>
+          <img src="static/images/figure0.png"></img>
           </div>
           <p>
-            We introduce <b><i>AirExo</i></b>, an open-source, portable, adaptable, inexpensive (<b>approximately $300 per arm</b>), and robust exoskeleton system. The system is initially developed for <a href="https://github.com/AirExo/airexo-models/tree/main/flexiv">Flexiv Rizon arms</a>, and it can be quickly modified for different robotic arms, such as <a href="https://github.com/AirExo/airexo-models/tree/main/ur5">UR5</a>, <a href="https://github.com/AirExo/airexo-models/tree/main/franka">Franka</a> and <a href="https://github.com/AirExo/airexo-models/tree/main/kuka">Kuka</a>.
+            In <b><i>ExcavatorRL</i></b>, we initially construct an Excavation Scene, which details the data collection process from real-world scenarios and the development of a Unity-based simulation environment. We then conduct an analysis of a typical excavation workflow based on the requirements of real-world excavation scenarios and accordingly define the excavation task. Subsequently, we implement Data Enhancement techniques to improve the quality and diversity of the training data. We train a Generative Adversarial Network (GAN) capable of generating potential operational trajectories derived from the actions of the excavator within the simulation scene. These trajectories are subsequently refined through a Trajectory Screening module to ensure their feasibility and safety. Within the RL framework, we define both the reward space and the action space to quantify the performance of the excavator in the simulated scene. We process complex terrain into grid-like pseudo-images and convert them into grid feature vectors using the image encoder in large model CLIP \cite{radford2021learning}. This approach encodes the excavator's motion parameters and terrain information into state space to support decision making. Finally, we utilize popular RL algorithm, the Decision Transformer (DT) , to train, infer, and evaluate ExcavatorRL. Through a series of experiments and evaluations, we demonstrate the efficacy of the proposed system in achieving unmanned excavation. 
           </p>
           <div class="column">
           <video id="airexo" autoplay muted loop playsinline height="100%">
